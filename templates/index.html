@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon1.png') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/themify/themify-icons.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/slick/slick.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/lightbox2/css/lightbox.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="/">
+							<img src="{{ url_for('static', filename='images/icons/new_logo.png') }}" alt="IMG-LOGO" data-logofixed="{{ url_for('static', filename='images/icons/logo1.png') }}">
+						</a>
+					</div>
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="/">Home</a>
+								</li>
+
+
+								<li>
+									<a href="showBorrower">Borrower</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+				
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13">
+				<a href="/" class="txt19">Home</a>
+			</li>
+
+
+			<li class="t-center m-b-33">
+				<a href="showBorrower" class="txt19">Borrower</a>
+			</li>
+
+
+	
+		</ul>
+
+
+							</div>
+		</div>
+	</aside>
+
+	<!-- Slide1 -->
+	<section class="section-slide">
+		<div class="wrap-slick1">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url({{ url_for('static', filename='images/loan3.jpg') }});">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+							To see if you are eligible or not
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+							Click
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+							<!-- Button1 -->
+							<a href="showBorrower" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Here
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+				</div>
+
+				<div class="item-slick1 item2-slick1" style="background-image: url({{ url_for('static', filename='images/loab2.jpg') }});">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" >
+							To Find of you are eligible 
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37">
+							click this
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="rotateIn">
+							<!-- Button1 -->
+							<a href="showBorrower" class="btn1 flex-c-m size1 txt3 trans-0-4">
+								Button
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="wrap-slick1-dots"></div>
+		</div>
+	</section>
+
+	<!-- Welcome -->
+	<section class="section-welcome bg1-pattern p-t-120 p-b-105">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-t-45 p-b-30">
+					<div class="wrap-text-welcome t-center">
+						<span class="tit2 t-center">
+							Loan Predictor
+						</span>
+
+						<h3 class="tit3 t-center m-b-35 m-t-5">
+							Welcome
+						</h3>
+
+						<p class="t-center m-b-22 size3 m-l-r-auto">
+							We will help you know if your loan applcation will get approved or not
+						</p>
+
+					
+
+				<div class="col-md-6 p-b-30">
+					<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+						<img src="{{ url_for('static', filename='images/loan4.gif') }}" alt="IMG-OUR">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Intro -->
+	<section class="section-intro">
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url({{ url_for('static', filename='images/loan1.jpg') }});">
+			<span class="tit2 p-l-15 p-r-15">
+				Predict
+			</span>
+
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+				Loan Approval
+			</h3>
+		</div>
+
+		<div class="content-intro bg-white p-t-77 p-b-133">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 p-t-30">
+						<!-- Block1 -->
+						<div class="blo1">
+							<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+							<img src="{{ url_for('static', filename='images/loan6.png') }}" alt="IMG-OUR">
+						</div>
+
+
+						</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 p-t-20">
+						<!-- Block1 -->
+						<div class="blo1">
+							<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+							<img src="{{ url_for('static', filename='images/loan5.webp') }}" alt="IMG-OUR">
+
+							<div class="wrap-text-blo1 p-t-35">
+								<a href="#"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+									Borrower
+								</h4></a>
+
+								<p class="m-b-20">
+									Can get to know if taking the loan will not let him in debts
+								</p>
+
+								<a href="showBorrower" class="txt4">
+									Predict About it
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+
+
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/slick-custom.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/parallax100/parallax100.js') }}"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/lightbox2/js/lightbox.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

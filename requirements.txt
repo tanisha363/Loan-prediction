@@ -1,0 +1,9 @@
+pybuilder
+selenium 
+flask
+pillow
+pandas
+sklearn
+graphviz
+image
+flask_mysqldb

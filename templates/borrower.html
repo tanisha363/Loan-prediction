@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Borrower</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon1.png') }}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/themify/themify-icons.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/slick/slick.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/lightbox2/css/lightbox.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.js') }}"></script>
+	<!--<script>
+		$(function() {
+			$('#btnSignUp').click(function() {
+ 
+				$.ajax({
+					url: '{{ url_for("signUp") }}',
+					//url: '/signUp',
+					data: $('form').serialize(),
+					type: 'POST',
+					success: function(response) {
+						console.log(response);
+					},
+					error: function(error) {
+						console.log(error);
+					}
+				});
+			});
+		});
+	</script>-->
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- Logo -->
+					<div class="logo">
+						<a href="/">
+							<img src="{{ url_for('static', filename='images/icons/new_logo.png') }}" alt="IMG-LOGO" data-logofixed="{{ url_for('static', filename='images/icons/logo1.png') }}">
+						</a>
+					</div>
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									<a href="/">Home</a>
+								</li>
+
+								
+
+								<li>
+									<a href="showBorrower">Borrower</a>
+								</li>
+
+								
+						</nav>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+			<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			<li class="t-center m-b-13">
+				<a href="/" class="txt19">Home</a>
+			</li>
+
+			
+
+			<li class="t-center m-b-33">
+				<a href="showBorrower" class="txt19">Borrower</a>
+			</li>
+
+			
+
+		
+		</ul>
+
+		<!-- - -->
+		
+
+			
+
+			
+			</div>
+		</div>
+	</aside>
+
+
+	<!-- Title Page -->
+	<section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{ url_for('static', filename='images/loan7.png') }});">
+		<h2 class="tit1 t-left">
+			BORROWER
+		</h2>
+	</section>
+
+
+	<!-- Reservation -->
+	<section class="section-reservation bg1-pattern p-t-100 p-b-113">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 p-b-30">
+					<div class="t-center">
+						<span class="tit2 t-center">
+							Borrower
+						</span>
+
+						<h3 class="tit3 t-center m-b-35 m-t-2">
+							ENTER THE DETAILS
+						</h3>
+					</div>
+
+					<form method="POST" action="{{ url_for('predict') }}" class="wrap-form-reservation size22 m-l-r-auto">
+						<div class="row">
+							<div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- State -->
+								<select class="selection-1" name="state">
+									<option>JK</option>
+									<option>Ladakh</option>
+									<option>Punjab</option>
+									<option>Haryana</option>
+									<option>Delhi</option>
+									<option>Rajasthan</option>
+									<option>UP</option>
+									<option >Mhegalaya</option>
+									<option>UK</option>
+									<option>Bihar</option>
+									<option>Gujarat</option>
+									<option>MP</option>
+									<option>WB</option>
+									<option>Jharkhand</option>
+									<option>Assam</option>
+									<option>Arunachalpradesh</option>
+									<option>Orissa</option>
+									<option>Telangana</option>
+									<option>Maharastra</option>
+									<option>Andhra pradesh</option>
+									<option>Karnataka</option>
+									<option>Tamilnadu</option>
+									<option>Kerala</option>
+
+								</select>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Gender -->
+								<select class="selection-1" name="gender">
+									<option>Male</option>
+									<option>Female</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<!-- Age -->
+								<span class="txt9">
+									Age
+								</span>
+
+								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="number" id="age" name="age" value="50">
+								</div>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Race -->
+								<select class="selection-1" name="race">
+									<option>Non-Coapplicant</option>
+									<option>White</option>
+									<option>Not applicable</option>
+									<option>Asian</option>
+									<option>American</option>
+									<option>Indian</option>
+									<option>Black African</option>
+								</select>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Marital Status -->
+								<select class="selection-1" name="marital_status">
+									<option>Married</option>
+									<option>Single</option>
+									<option>Divorced</option>
+								</select>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Occupation -->
+								<select class="selection-1" name="occupation">
+									<option>Govt</option>
+									<option>Accoutant</option>
+									<option>IT</option>
+									<option>Business</option>
+									<option>Manager</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<!-- Credit Score -->
+								<span class="txt9">
+									Credit Score
+								</span>
+
+								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="credit_score" name="credit_score" value="800">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<!-- Income -->
+								<span class="txt9">
+									Income
+								</span>
+
+								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="income" name="income" value="50000">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<!-- Debts -->
+								<span class="txt9">
+									Debts
+								</span>
+
+								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="debts" name="debts" value="50000">
+								</div>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Loan Type -->
+								<select class="selection-1" name="loan_type">
+									<option>Personal</option>
+									<option>Auto</option>
+									<option>Credit</option>
+									<option>Home</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<!-- Debts -->
+								<span class="txt9">
+									Loan Amount
+								</span>
+
+								<div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+									<input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="LoanAmount" name="LoanAmount" value="50000">
+								</div>
+							</div>
+							<div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+								<!-- Property-->
+								<select class="selection-1" name="Property">
+									<option>Urban</option>
+									<option>Rural</option>
+									<option>SemiUrban</option>
+								</select>
+							</div>
+							<div class="wrap-btn-booking flex-c-m m-t-6">
+								<!-- SignUp -->
+								<button id="btnPredict" type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4">
+									Predict
+								</button>
+								<!-- Prediction -->
+								<!--<span class="txt9">
+									
+								</span>-->
+							</div>
+						</div>	
+					</form>
+				</div>
+			</div>
+
+			
+		</div>
+	</section>
+		
+	<!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+				
+					</ul>
+				</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+	
+
+
+
+<!--===============================================================================================-->
+	<!--<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js') }}"></script>-->
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/daterangepicker/moment.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/daterangepicker/daterangepicker.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/slick/slick.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/slick-custom.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/parallax100/parallax100.js') }}"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/countdowntime/countdowntime.js') }}"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="{{ url_for('static', filename='vendor/lightbox2/js/lightbox.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<!--===============================================================================================-->
+	<!--<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>-->
+
+</body>
+</html>
